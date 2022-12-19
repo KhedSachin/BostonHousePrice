@@ -1,0 +1,46 @@
+{% extends 'base.html' %} 
+
+{% block body %}
+  
+  <h1 class="display-4 text-center">Boston House Price Prediction</h1>
+  <div class='container'>
+    
+    <img width='100%' src='https://images.unsplash.com/photo-1526386172983-95d2ae8a88a6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80' class="img-fluid" alt='No Image!'>
+  
+  </div>
+  <span></span>
+  <div class ='container-fluid'>
+    <div class='jumbotron'>
+    <p>
+      <h3>Description : </h3><br>
+      <h6>The dataset used in this project comes from the UCI Machine Learning Repository.
+      This data was collected in 1978 and each of the 506 entries represents aggregate 
+      information about 14 features of homes from various suburbs located in Boston. <br>
+      <br>
+      The features can be summarized as follows:<br>
+      <br>
+      CRIM: This is the per capita crime rate by town. <br>
+      ZN: This is the proportion of residential land zoned for lots larger than 25,000 sq.ft.<br>
+      INDUS: This is the proportion of non-retail business acres per town.<br>
+      CHAS: This is the Charles River dummy variable (this is equal to 1 if tract bounds river; 0 otherwise).<br>
+      NOX: This is the nitric oxides concentration (parts per 10 million).<br>
+      RM: This is the average number of rooms per dwelling. <br>
+      AGE: This is the proportion of owner-occupied units built prior to 1940. <br>
+      DIS: This is the weighted distances to five Boston employment centers. <br>
+      RAD: This is the index of accessibility to radial highways. <br>
+      TAX: This is the full-value property-tax rate per $10,000. <br>
+      PTRATIO: This is the pupil-teacher ratio by town. <br>
+      B: This is calculated as 1000(Bk — 0.63)², where Bk is the proportion of people of African American descent by town. <br>
+      LSTAT: This is the percentage lower status of the population. <br>
+      MEDV: This is the median value of owner-occupied homes in $1000s. <br>
+      <br>
+      Following features have been used for model training and rest redundant columns have been removed.<br>
+      Features Used : CRIM, ZN, INDUS, NOX, RM, AGE,	DIS,	TAX,	PTRATIO,	B,	LSTAT and	MEDV.
+
+    </h6>
+    <a href= "predict" class="link-primary" >Click here to Predict The Price</a>
+  </div>
+    </p>
+  </div>
+
+{% endblock %}

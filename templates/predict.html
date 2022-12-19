@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <div class = 'container-fluid'>  
+        <form  class = "jumbotron" action='predict' method='post' >
+          <a href = "{{url_for('index')}}" class="link-primary">HomePage</a>
+          <br>
+          <br>
+          <h6>Please enter the values and click on submit button to get the Price.</h6>
+          <br>
+            <div  class="row g-2">
+              <div class="col-md-3">
+                  <input type="number" step="0.000001" name='crim'  class="form-control" placeholder="CRIM" required='required'>
+              </div>
+              <div class="col-md-3">
+                <input type="number" step="0.000001"  name= 'zn' class="form-control" placeholder="ZN" required='required'>
+              </div>
+              <div class="col-md-3">
+                <input type="number" step="0.000001"  name='indus' class="form-control" placeholder="INDUS" required='required'>
+              </div>
+              <div class="col-md-3">
+                <input type="number" step="0.000001" name='nox' class="form-control" placeholder="NOX" required='required'>
+              </div>
+              <div class="col-md-3">
+                <input type="number" step="0.000001" name='rm' class="form-control" placeholder="RM" required='required'>
+              </div>
+              <div class="col-md-3">
+                <input type="number"step="0.0000001" name='age' class="form-control" placeholder="AGE" required='required'>
+              </div>
+              <div class="col-md-3">
+                <input type="number"step="0.0000001" name='dis' class="form-control" placeholder="DIS" required='required'>
+              </div>
+              <div class="col-md-3">
+                <input type="number" step="0.000001" name='tax' class="form-control" placeholder="TAX" required='required'>
+              </div>
+              <div class="col-md-3">
+                <input type="number"step="0.000001"  name='ptratio' class="form-control" placeholder="PTRATIO" required='required'>
+              </div>
+              <div class="col-md-3">
+                <input type="number" step="0.000001" name='b' class="form-control" placeholder="B" required='required'>
+              </div>
+              <div class="col-md-3">
+                <input type="number" step="0.000001" name='lstat' class="form-control" placeholder="LSTAT" required='required'>
+              </div>
+              <div class="row g-1">
+              <div class="col-md-3">
+                  <button  class="btn btn-outline-dark" type='submit'>Submit</button>
+              </div>
+            </div>
+              <div class='container text-center'>
+                  <h3> {{predicted_score}} </h3>
+              </div> 
+        </form>
+      </div>
+    
+{% endblock  %}
